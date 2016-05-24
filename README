@@ -1,4 +1,4 @@
-Gtk3-SourceView version 0.01
+Gtk3-SourceView version 0.1
 ============================
 
 Gtk3::SourceView is a simple binding for the Gtk3 SourceView 3.x widget using Gobject::Introspection. The Gtk SourceView widget is for example used by gedit, Anjuta and several other projects.
