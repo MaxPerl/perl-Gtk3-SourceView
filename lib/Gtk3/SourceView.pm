@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use Glib::Object::Introspection;
 
-our $VERSION = "0.1";
+our $VERSION = "0.11";
 
 
 # customization ------------------------------------------------------- #
