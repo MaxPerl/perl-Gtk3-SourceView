@@ -251,7 +251,7 @@ When the completion is activated, a Gtk3::SourceView::CompletionContext object i
 
 The Gtk3::SourceView::CompletionProposal interface represents a proposal. The Gtk3::SourceView::CompletionItem class is a simple implementation of this interface.
 
-Each Gtk3::SourceView::View object is associated with a Gtk3::SourceView::Completion instance. This instance can be obtained with C<< $view->get_completion(); >>. The Gtk3::SourceView::View class contains also the “show-completion” signal.
+Each Gtk3::SourceView::View object is associated with a Gtk3::SourceView::Completion instance. This instance can be obtained with C<< $view->get_completion(); >>. The Gtk3::SourceView::View class contains also the "show-completion" signal.
 
 A same Gtk3::SourceView::CompletionProvider object can be used for several Gtk3::SourceView::Completion.
 
@@ -632,6 +632,8 @@ returned.
 =item * L<Glib::Object::Subclass>
 
 =item * L<Gtk3>
+
+=back
 
 =head1 AUTHOR
 
