@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use Glib::Object::Introspection;
 
-our $VERSION = "0.11";
+our $VERSION = "0.12";
 
 
 # customization ------------------------------------------------------- #
@@ -131,6 +131,16 @@ Gtk3::SourceView - Perl binding for the Gtk3::SourceView widget
 	$window->show_all();
 	Gtk3->main();
 
+=head1 INSTALLATION
+
+You need to install the typelib file for GtkSource. For example on Debian/Ubuntu it should be necessary to install the following package:
+
+	sudo apt-get install gir1.2-gtksource-3.0
+	
+On Mageia for example the following should be preinstalled already:
+
+	urpmi lib64gtksourceview-gir3.0
+
 =head1 DESCRIPTION
 
 Gtk3::SourceView is a simple binding for the Gtk3 SourceView 3.x widget using Gobject::Introspection. The Gtk SourceView widget is for example used by gedit, Anjuta and several other projects.
@@ -214,7 +224,7 @@ Gets the Gtk3::SourceView::Completion associated with $view . This is necessary 
 =head3 Syntax Highlighting
 
 For Syntax Highlighting you first have to create a Gtk3::SourceView::LanguageManager. From the LanguageManager you can obtain a Gtk3::SourceView::Language, which represents a syntax highlighted language and which can applied to a Gtk3::SourceView::Buffer with C<< $buffer->set_language($lang) >> (see above and the exemplary code at synopsis). Useful methods are:
-
+sudo apt-get install gir1.2-gtksource-3.0
 =over
 
 =item * C<< my $lm = Gtk3::SourceView::LanguageManager->new() >>
@@ -372,6 +382,8 @@ For starting the following simple example is hopefully helpful:
 	$completion->add_provider($custom_provider);
 
 =head3 Search and Replace
+
+B<PLEASE NOTE:> The following example describes not the way you should go!!! It is better to use a Gtk3::TextMark to save the start and end position of the current search result. You can find a wonderful example in C on L<http://www.bravegnu.org/gtktext/x276.html> which can be a good basis for your perl script. I hope to fix the manual accordingly in latter releases!
 
 A GtkSourceSearchContext is used for the search and replace in a GtkSourceBuffer. The search settings are represented by a GtkSourceSearchSettings object.
 
